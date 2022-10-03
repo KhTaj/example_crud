@@ -13,6 +13,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        echo "Tajuddin is calling database seeder run method.";
         // \App\Models\User::factory(10)->create();
     }
 }
