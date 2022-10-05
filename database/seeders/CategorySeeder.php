@@ -7,7 +7,7 @@ use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class CategoriesSeeder extends Seeder
+class CategorySeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -18,14 +18,18 @@ class CategoriesSeeder extends Seeder
     {
          // echo "Tajuddin is calling database seeder run method.";
         DB::table('categories')->insert([
-            'name'=>'Men',
+            'name'=>'Fashion',
             'is_active' => true,
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
 
         ]);
         Category::create([
-            'name'=> 'Woman',
+            'name'=> 'Men',
+            'is_active'=>true
+        ]);
+        Category::create([
+            'name'=> 'Lifestyle',
             'is_active'=>true
         ]);
     }
